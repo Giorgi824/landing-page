@@ -1,0 +1,21 @@
+import { nav } from "../data";
+const MobileNav = () => {
+  return (
+    <div className="bg-accent/95 w-full h-full">
+      <ul className="h-full flex flex-col justify-center items-center gap-y-8">
+        {nav.map((item, idx) => {
+          const { href, name } = item;
+          return (
+            <li key={idx}>
+              <a className="link text-white text-xl" href={href}>
+                {name}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+
+export default MobileNav;
